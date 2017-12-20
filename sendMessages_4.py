@@ -45,9 +45,6 @@ def getRCToken(ENV,userName,extNum,passWord,grant_Type): #定义方法，传env,
         print("failed to get access_token, the reason is" + json.dumps(rcTokenJsonText)) #
     return rc_access_token_data
 
-
-
-
 def glipLogin(rc_access_token, ENV):
     baseUrl = getGlipBaseUrl(ENV) + "/api/login"
     payload = {'rc_access_token_data':rc_access_token,'mobile': True, 'for_mobile': True}
@@ -204,7 +201,7 @@ def run(ENV,userName,extNum,passWord, createTeamCount,messageCount,type,teamName
         createTeam(glip_token['tk'],ENV, glip_token['creator_id'], teamName + str(index), members, teamName + str(index),messageCount,type)
         time.sleep(0.5)
 
-run(os.getenv('ENV'),os.getenv('RCNumber'),os.getenv('RCExtension'),os.getenv('RCPassword'),int(os.getenv('TeamCount')),int(os.getenv('MessageCountPerTeam')),os.getenv('type'),os.getenv('teamName'))
+run(os.getenv('ENV'),os.getenv('RCNumber'),os.getenv('RCExtension'),os.getenv('RCPassword'),os.getenv('teamName', int(os.getenv('TeamCount')),int(os.getenv('MessageCountPerTeam')),os.getenv('type')))
 
 #run('https://platform.devtest.ringcentral.com','18582571753','101','Test!123','32004',50,30, 'task')
 #run('https://platform.devtest.ringcentral.com','18886283305','101','Test!124','32004',1,1, 'note')
