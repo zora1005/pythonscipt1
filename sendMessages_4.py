@@ -8,7 +8,7 @@ header = {'content-type': 'application/json'}
 source = 'mobile'
 
 def getGlipBaseUrl(ENV):
-    ENV= os.getenv('ENV')
+    
     if ENV == "XIA_lab":
         glipBaseUrl= "https://aws13-g04-uds01.asialab.glip.net:23304"
     elif ENV == "Adela_Sandxbox":
@@ -23,7 +23,7 @@ def getGlipBaseUrl(ENV):
 
 
 def getRCToken(ENV,userName,extNum,passWord,grant_Type): #定义方法，传env,用户名，密码，认证方式
-    ENV= os.getenv('ENV')
+    
     if ENV == 'XIA_lab':
         baseUrl = 'http://api-up.lab.rcch.ringcentral.com/restapi/oauth/token'
         rcSecurtyCode = 'TWtDZGxTVnFRMDZINmk3S1ljdjliZzo1X3RGQlhCUVRMV2FWY1BGNjFMVUdnbmdCZmM4S0dRQ2FaMF9VVHc4MHZzdw=='
