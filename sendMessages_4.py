@@ -196,7 +196,7 @@ def run(ENV,userName,extNum,passWord, teamName,createTeamCount,messageCount,type
     glip_token = glipLogin(rc_access_token, ENV)
     #teamName = "AdelaTeam"+str(time.time())+"_No."
     teamName = teamName +"_No."
-    for index in range(0, createTeamCount):
+    for index in range(1, createTeamCount+1):
         members = [glip_token['creator_id'], 241090562 + index]
         createTeam(glip_token['tk'],ENV, glip_token['creator_id'], teamName + str(index), members, teamName + str(index),messageCount,type)
         time.sleep(0.5)
