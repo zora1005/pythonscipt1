@@ -191,7 +191,7 @@ def createTeam(tk, ENV, creator_id,email_friendly_abbreviation,members,set_abbre
 
 
 
-def run(ENV,userName,extNum,passWord, createTeamCount,messageCount,type,teamName):
+def run(ENV,userName,extNum,passWord, teamName,createTeamCount,messageCount,type):
     rc_access_token = getRCToken(ENV,userName,extNum,passWord,'password')
     glip_token = glipLogin(rc_access_token, ENV)
     #teamName = "AdelaTeam"+str(time.time())+"_No."
