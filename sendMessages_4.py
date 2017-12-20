@@ -164,24 +164,24 @@ def createTeam(tk, ENV, creator_id,email_friendly_abbreviation,members,set_abbre
         data = createTeamResonse.json();
         if type == 'post' or type == 'Post':
             teamId = data['_id'] #传一个字符串对象
-            for index in range(0, messageCount):
+            for index in range(1, messageCount+1):
                 replyPost(tk,ENV, creator_id,teamId,'repiedtestToday_' + str(index))
         elif type == 'task' or type == 'Task':
             group_ids = [data['_id']] #数据格式为数组，
             tCreator_id = data['creator_id']
-            for index in range(0, messageCount):
+            for index in range(1, messageCount+1):
                 text = 'Task' + str(index)
                 createTask(tk, ENV, tCreator_id,group_ids,messageCount,text)
         elif type == 'event' or type == 'Event':
             group_ids = [data['_id']]
             tCreator_id = data['creator_id']
-            for index in range(0, messageCount):
+            for index in range(1, messageCount+1):
                 text = 'Event'+ str(index)
                 createEvent(tk, ENV, tCreator_id,group_ids, messageCount,text)
         elif type == 'note' or type == 'Note':
             group_ids = [data['_id']]
             tCreator_id = data['creator_id']
-            for index in range(0, messageCount):
+            for index in range(1, messageCount+1):
                 title = 'Note' + str(index)
                 createNote(tk, ENV, tCreator_id,group_ids,messageCount,title)
     else:
