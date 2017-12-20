@@ -27,7 +27,7 @@ def getRCToken(ENV,userName,extNum,passWord,grant_Type): #定义方法，传env,
     if ENV == 'XIA_lab':
         baseUrl = 'http://api-up.lab.rcch.ringcentral.com/restapi/oauth/token'
         rcSecurtyCode = 'TWtDZGxTVnFRMDZINmk3S1ljdjliZzo1X3RGQlhCUVRMV2FWY1BGNjFMVUdnbmdCZmM4S0dRQ2FaMF9VVHc4MHZzdw=='
-    elif ENV == 'Steve_sandbo':
+    elif ENV == 'Steve_sandbox':
         baseUrl = 'https://platform.devtest.ringcentral.com/restapi/oauth/token'
         rcSecurtyCode = 'TWtDZGxTVnFRMDZINmk3S1ljdjliZzo1X3RGQlhCUVRMV2FWY1BGNjFMVUdnbmdCZmM4S0dRQ2FaMF9VVHc4MHZzdw=='
     rcAuthCode = 'Basic ' + rcSecurtyCode #定义字符串变量
