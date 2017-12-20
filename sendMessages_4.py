@@ -201,7 +201,7 @@ def run(ENV,userName,extNum,passWord, createTeamCount,messageCount,type,teamName
         createTeam(glip_token['tk'],ENV, glip_token['creator_id'], teamName + str(index), members, teamName + str(index),messageCount,type)
         time.sleep(0.5)
 
-run(os.getenv('ENV'),os.getenv('RCNumber'),os.getenv('RCExtension'),os.getenv('RCPassword'),os.getenv('teamName', int(os.getenv('TeamCount')),int(os.getenv('MessageCountPerTeam')),os.getenv('type')))
+run(os.getenv('ENV'),os.getenv('RCNumber'),os.getenv('RCExtension'),os.getenv('RCPassword'),os.getenv('teamName'), int(os.getenv('TeamCount')),int(os.getenv('MessageCountPerTeam')),os.getenv('type'))
 
 #run('https://platform.devtest.ringcentral.com','18582571753','101','Test!123','32004',50,30, 'task')
 #run('https://platform.devtest.ringcentral.com','18886283305','101','Test!124','32004',1,1, 'note')
